@@ -1,0 +1,77 @@
+função "aparece_funca0_apagar"
+
+O código não está envolvido em uma função ou escopo adequado, 
+o que pode resultar em erros ao executá-lo fora do contexto adequado. 
+É importante envolver o código em um bloco de função ou usá-lo dentro 
+de um evento ou função apropriada no contexto correto (por exemplo, dentro de um evento de clique de botão).
+
+A linha que obtém a referência para o formulário usando document.getElementsByTagName("form")[0] 
+pode causar problemas se não houver nenhum elemento <form> 
+no documento HTML ou se houver mais de um elemento <form>. 
+Para evitar problemas, é recomendado utilizar um identificador único (como um id) 
+para acessar o formulário de forma mais precisa.
+
+Ao acessar o estilo do elemento obtido com document.getElementsByName('apagar').style, 
+a propriedade style retorna undefined porque getElementsByName retorna uma lista de elementos, 
+mesmo que haja apenas um elemento com esse nome. Portanto, é necessário acessar o primeiro elemento da lista 
+usando [0] antes de acessar a propriedade style.
+
+É importante garantir que o código seja executado apenas quando o documento estiver totalmente carregado. 
+Isso pode ser feito colocando o código dentro de um evento "DOMContentLoaded" ou chamando a função após o evento "load" do documento.
+
+ex:  // Chamando a função após o carregamento completo do documento
+
+document.addEventListener("DOMContentLoaded", function() {
+  aparece_botao_apagar();
+});
+
+
+setInterval( function() {
+
+}, 1000);*/
+
+/*function consultaEndereco() {
+    let cep = document.querySelector("#cep").value;
+
+    if (cep.length !== 8) {
+        alert('CEP inválido!');
+        return;
+    };
+
+    let url = `viacep.com.br/ws/${cep}/json/`;
+
+    fetch(url).then(function(response) {
+        console.log(response);
+    });
+}
+
+A linha de código const botao_apagar = document.querySelector('apagar'); 
+está usando apenas o nome do elemento HTML 'apagar' como seletor. 
+Para selecionar corretamente o elemento com base em seu atributo name, 
+você precisa usar a sintaxe correta com o seletor de atributo [name="apagar"].
+
+
+/*const botao = document.querySelector(".botao");
+
+botao.addEventListener("click", buscar_cep);
+
+function buscar_cep(event) {
+    event.preventDefault();
+    let cep = document.querySelector("#cep").value;
+    
+    if (cep.length !== 8) {
+        alert("Cep inválido -- Informe um cep com 8 dígitos!");
+        return;
+    }*/
+
+        /* link de busca da api */
+    /*let url = `viacep.com.br/ws/${cep}/json/`;*/
+    
+    /*consumindo Api com o fetch() */
+    /*fetch(url).then(function(response) {
+        console.log(response);
+    });
+    
+    
+
+}*/
